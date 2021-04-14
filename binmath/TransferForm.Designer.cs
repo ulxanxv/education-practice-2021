@@ -30,7 +30,7 @@ namespace binmath
         private void InitializeComponent()
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.transferButton = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -44,16 +44,15 @@ namespace binmath
             this.textBox1.TabIndex = 0;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button1
+            // transferButton
             // 
-            this.button1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(373, 48);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 33);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Перевести";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.transferButton.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.transferButton.Location = new System.Drawing.Point(373, 48);
+            this.transferButton.Name = "transferButton";
+            this.transferButton.Size = new System.Drawing.Size(117, 33);
+            this.transferButton.TabIndex = 1;
+            this.transferButton.Text = "Перевести";
+            this.transferButton.UseVisualStyleBackColor = true;
             // 
             // textBox2
             // 
@@ -85,7 +84,7 @@ namespace binmath
             this.ClientSize = new System.Drawing.Size(504, 161);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.transferButton);
             this.Controls.Add(this.textBox1);
             this.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MaximizeBox = false;
@@ -103,7 +102,7 @@ namespace binmath
         #endregion
 
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button transferButton;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
     }

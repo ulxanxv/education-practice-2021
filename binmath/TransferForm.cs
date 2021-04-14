@@ -1,51 +1,63 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Numerics;
 using System.Windows.Forms;
 
-namespace binmath
-{
+namespace binmath {
+
     public partial class TransferForm : Form
     {
         public TransferForm()
         {
             InitializeComponent();
+
+            transferButton.Click += TransferButton_Click;
         }
-        private int toDecimal(string str)
+
+        /// <summary>
+        /// Конвертация двоичного числа (строки) в эквивалентное десятичное представление
+        /// </summary>
+        /// <param name="value">Двоичное число (строка)</param>
+        /// <returns>Десятичное число (строка)</returns>
+        public string BinaryToDec(string value)
         {
-            return Convert.ToInt32(str, 2);
+            BigInteger res = 0;
+
+            foreach (char c in value)
+            {
+                res <<= 1;
+                res += c == '1' ? 1 : 0;
+            }
+
+            return res.ToString();
         }
-        private bool Check(string str) 
+
+        private bool Check(string str)
         {
-            if (str == "") 
+            if (string.IsNullOrEmpty(str))
             {
                 return false;
             }
-            foreach (var c in str) 
+
+            foreach (char symbol in str)
             {
-                if (c == '1' || c == '0')
+                if (symbol == '1' || symbol == '0')
                 {
+                    continue;
                 }
-                else 
-                {
-                    return false;
-                }
+                return false;
             }
+
             return true;
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (Check(textBox1.Text)) 
-            {
-                textBox2.Text = toDecimal(textBox1.Text).ToString();
+
+        private void TransferButton_Click(object sender, EventArgs e) {
+            if (Check(textBox1.Text)) {
+                textBox2.Text = BinaryToDec(textBox1.Text);
                 return;
             }
+
             MessageBox.Show("Число введено не в двоичной форме!");
         }
     }
+
 }

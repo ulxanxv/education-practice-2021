@@ -8,16 +8,17 @@ namespace binmath {
         public MainForm()
         {
             InitializeComponent();
+
+            transferFormButton.Click += TransferFormButton_Click;
+            additionFormButton.Click += AdditionFormButton_Click;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            new TransferForm().ShowDialog();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
+        private void AdditionFormButton_Click(object sender, EventArgs e) {
             new AdditionFrom().ShowDialog();
+        }
+
+        private void TransferFormButton_Click(object sender, EventArgs e) {
+            new TransferForm().ShowDialog();
         }
     }
 
