@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "binmath", "binmath\binmath.csproj", "{5CE84C62-4351-4767-AAC1-8B435946670B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CE84C62-4351-4767-AAC1-8B435946670B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CE84C62-4351-4767-AAC1-8B435946670B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CE84C62-4351-4767-AAC1-8B435946670B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CE84C62-4351-4767-AAC1-8B435946670B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {38D12023-BE41-4C2D-A676-1E8B5D99CF0A}
+	EndGlobalSection
+EndGlobal
