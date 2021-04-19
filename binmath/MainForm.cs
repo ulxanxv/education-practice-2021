@@ -5,6 +5,7 @@ namespace binmath {
 
     public partial class MainForm : Form
     {
+
         public MainForm()
         {
             InitializeComponent();
@@ -13,13 +14,16 @@ namespace binmath {
             additionFormButton.Click += AdditionFormButton_Click;
         }
 
-        private void AdditionFormButton_Click(object sender, EventArgs e) {
+        private void AdditionFormButton_Click(object sender, EventArgs e)
+        {
             new AdditionFrom().ShowDialog();
         }
 
-        private void TransferFormButton_Click(object sender, EventArgs e) {
+        private void TransferFormButton_Click(object sender, EventArgs e)
+        {
             new TransferForm().ShowDialog();
         }
+
     }
 
 }
